@@ -1,0 +1,15 @@
+name: Workflow Trigger
+on:
+  repository_dispatch:
+    types: [create-pr]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run build
+        run: |
+          echo "Building PR #$PR_NUMBER from $PR_SOURCE_BRANCH to $PR_TARGET_BRANCH"
