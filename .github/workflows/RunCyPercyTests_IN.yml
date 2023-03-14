@@ -29,7 +29,7 @@ jobs:
       - name: 'Checkout the repository'
         uses: actions/checkout@v2
         with:
-          ref: PercyAutomation1
+          ref: main
           
       - name: 'git branch info'
         run: | 
