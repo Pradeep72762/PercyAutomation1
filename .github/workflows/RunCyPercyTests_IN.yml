@@ -8,6 +8,8 @@ on:
       testcases:
         description: 'specify test cases' 
         default: '/*.cy.js'
+  repository_dispatch:
+    types: [create-pr-RunCyPercyTests_IN]
 
 jobs:  
  ubuntu-job:
